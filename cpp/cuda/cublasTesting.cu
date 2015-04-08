@@ -76,7 +76,10 @@ void printArray(DataType* array, int M, int N, const char* prompt = "")
 }
 
 template <class ForwardIterator, class DataType>
-void sequence_fill(ForwardIterator first, ForwardIterator end, DataType init, DataType delta = DataType(1))
+void sequence_fill(ForwardIterator first, 
+				   ForwardIterator end, 
+				   DataType init, 
+				   DataType delta = DataType(1))
 {
 	while(first != end){
 		*first = init;
