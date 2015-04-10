@@ -38,7 +38,7 @@ GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
 FILES = $(foreach d, $(USER_DIR), $(wildcard $(d)/*.cpp))
 OBJS = $(patsubst %.cpp, %.o, $(FILES))
 
-TESTS = run_test
+TESTS = $(patsubst %.cpp, %.e, $(FILES))
 # House-keeping build targets.
 
 all : $(TESTS)
@@ -54,5 +54,6 @@ clean :
 # function.
 %.o : %.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
-$(TESTS) : $(OBJS) 
+#$(TESTS) : $(OBJS)
+%.e : %.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread  $^ -o $@ -L$(GTEST_DIR)/lib -lgtest -lgtest_main	
