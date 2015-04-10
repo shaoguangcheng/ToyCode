@@ -84,8 +84,8 @@ void parseCommandLine(int argc, char* argv[])
 
     google::ParseCommandLineFlags(&argc, &argv, true);
 
-    if(argc == 1)
-        google::ShowUsageWithFlagsRestrict(argv[0], "gflagDemo");
+    if(1 == argc)
+        google::ShowUsageWithFlagsRestrict(argv[0], "flag_declare");
 }
 
 
