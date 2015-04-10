@@ -62,7 +62,7 @@ static bool ValidateFilename(const char* flagname, const string& value)
 	return bool(ret);
 }
 
-bool flagsValidator()
+static bool flagsValidator()
 {
 	bool ret = true;
 
@@ -75,7 +75,7 @@ bool flagsValidator()
 	return ret;
 }
 
-bool parseCommandLine(int argc, char* argv[])
+void parseCommandLine(int argc, char* argv[])
 {
     flagsValidator();
 
