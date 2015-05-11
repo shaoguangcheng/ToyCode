@@ -34,6 +34,7 @@ protected:
 
 	virtual void TearDown(){
 		quickTest::TearDown();
+		delete cq;
 	}
 };
 

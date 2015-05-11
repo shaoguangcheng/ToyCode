@@ -276,8 +276,8 @@ void findMaxMin(const DataType* const array, DataType* max, DataType* min, const
   dim3 gridSize(GRID_SIZE, GRID_SIZE, 1);
   dim3 blockSize(BLOCK_SIZE, 1, 1);
  
-//  findMaxMinKernel_2<<<gridSize, blockSize>>>(dev_array, dev_max, dev_min, N);
-  findMaxMinKernel_3<<<gridSize, blockSize>>>(dev_array, dev_max, dev_min, N);
+  findMaxMinKernel_2<<<gridSize, blockSize>>>(dev_array, dev_max, dev_min, N);
+//  findMaxMinKernel_3<<<gridSize, blockSize>>>(dev_array, dev_max, dev_min, N);
 
   CHECK_CUDA_ERROR(cudaMemcpy(min, dev_min, sizeof(DataType), cudaMemcpyDeviceToHost));
   CHECK_CUDA_ERROR(cudaMemcpy(max, dev_max, sizeof(DataType), cudaMemcpyDeviceToHost));

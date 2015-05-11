@@ -3,6 +3,8 @@
 #include <iostream>
 #include <unistd.h>
 
+// to compile this cpp, -Wl,-no-as-needed -std=x++11 -pthread should be added
+
 class testThread : public Thread
 {
     virtual void threadEntryFunc(){

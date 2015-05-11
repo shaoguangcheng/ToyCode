@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
 		LOG_FIRST_N(ERROR,5) << "LOG_FIRST_N(INFO,5)  google::COUNTER=" << google::COUNTER << "  i=" << i;
 	}
 
-	fun();
+//	fun();
 
 	return 0;
 }
