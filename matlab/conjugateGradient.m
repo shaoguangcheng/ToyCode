@@ -9,7 +9,6 @@ A = [1,2,3;
     3,6,8];
 
 while k < maxIter 
-    x
     gNew = func(x);
     if norm(gNew) < eplison
         break
@@ -22,7 +21,7 @@ while k < maxIter
        dNew = -gNew + beta*dOld;
     end
     
-    alpha = -1*(gNew'*dNew)/(dNew'*A'*dNew);
+    alpha = -1*(gNew'*dNew)/(dNew'*A'*dNew); % cal step
     x = x + alpha*dNew;
     
     dOld = dNew;
