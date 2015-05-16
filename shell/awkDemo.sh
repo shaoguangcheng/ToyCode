@@ -17,3 +17,7 @@ ls | awk 'BEGIN{
 		print name[i];
 	}'
 
+ll | sed '1d' | awk '{
+	if($9 != "./" && $9 != "../") 
+		print $0;
+	}'
