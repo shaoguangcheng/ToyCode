@@ -1,9 +1,9 @@
 % A demo to show bivariate Metropolis Hasting samplings
 % For simplicity, I just use uniform distribution as proposal distribution
 % In this demo, I sample p(x, y) ~ N(miu, delta), miu = (1, 1), delta = [1,
-% 0.1;0.1, 1];
+% 0.7;0.7, 1];
 
-N = 1000;
+N = 10000;
 k = 1;
 x = zeros(2, N);
 
@@ -14,8 +14,8 @@ x(1, k) = rand()*(upperBound - lowerBound) + lowerBound; % init x(1, :). For two
 x(2, k) = rand()*(upperBound - lowerBound) + lowerBound;
 
 miu = [1;1];
-sigma = [1, 0.1;
-        0.1, 1];
+sigma = [1, 0.7;
+        0.7, 1];
 
 while k < N
     k = k + 1;
