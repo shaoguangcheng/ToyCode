@@ -11,6 +11,7 @@ N = size(A, 1); % number of state
 T = length(O);  % length of observation sequence
 t = 1;
 
+% Here can be optimized. (using less memory)
 X = zeros(T, N); % record the maximum prob of state i at time t
 Y = zeros(T, N); % record the previous state
 
