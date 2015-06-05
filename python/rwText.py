@@ -80,6 +80,6 @@ def main() :
 
 #  This part canbe executed no matter which way you choose 
 # jundge this module is recall by which way
-if __name__ == "__main__" :
+if __name__ == "main" :
 	main()
 
